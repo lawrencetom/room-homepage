@@ -10,55 +10,64 @@
   <title>Frontend Mentor | Room homepage</title>
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
+    <div class="overlay"></div>
     <nav>
-      <a href="#" class="header-menu">
+      <a href="#" id="btnHamburger" class="header__menu">
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <a href="#" class="header-logo">
+      <a href="#" class="header__logo">
         <img src="images/logo.svg" alt="room">
       </a>
+
+      <div class="header__links">
+        <a href="#" class="header__link">home</a>
+        <a href="#" class="header__link">shop</a>
+        <a href="#" class="header__link">about</a>
+        <a href="#" class="header__link">contact</a>
+      </div>
     </nav>
   </header>
   
-
-  <div>
-    <img src="images/mobile-image-hero-1.jpg" class="img-hero" alt="chair 1">
-  </div>
-
-  <div class="hero">
-    <h1>Discover innovative ways to decorate</h1>
-    <p>
-      We provide unmatched quality, comfort, and style for property owners across the country. 
-      Our experts combine form and function in bringing your vision to life. Create a room in your 
-      own style with our collection and make your property a reflection of you and what you love.
-    </p>
-    <div></div>
-    <a href="#" class="call-to-action">
-      Shop now
-      <img src="images/icon-arrow.svg" alt="arrow">
-    </a>
-  </div>
-
-  <div>
-    <img src="images/image-about-dark.jpg" class="img-about" alt="coffe-table set">
-  </div>
-
-  <div class="about">
-    <h2>About our furniture</h2>
-    <p>
-      Our multifunctional collection blends design and function to suit your individual taste.
-      Make each room unique, or pick a cohesive theme that best express your interests and what
-      inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-      or anything in between. Product specialists are available to help you create your dream space.
-    </p>
-  </div>
-
-  <div>
-    <img src="images/image-about-light.jpg" class="img-about" alt="white chair">
+  <div class="wrapper">
+    <div>
+      <img src="images/mobile-image-hero-1.jpg" class="img-hero" alt="chair 1">
+    </div>
+  
+    <div class="hero">
+      <h1>Discover innovative ways to decorate</h1>
+      <p>
+        We provide unmatched quality, comfort, and style for property owners across the country. 
+        Our experts combine form and function in bringing your vision to life. Create a room in your 
+        own style with our collection and make your property a reflection of you and what you love.
+      </p>
+      <div></div>
+      <a href="#" class="call-to-action">
+        Shop now
+        <img src="images/icon-arrow.svg" alt="arrow">
+      </a>
+    </div>
+  
+    <div>
+      <img src="images/image-about-dark.jpg" class="img-about" alt="coffe-table set">
+    </div>
+  
+    <div class="about">
+      <h2>About our furniture</h2>
+      <p>
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </p>
+    </div>
+  
+    <div>
+      <img src="images/image-about-light.jpg" class="img-about" alt="white chair">
+    </div>
   </div>
 
   <div class="attribution">
@@ -66,6 +75,7 @@
     Coded by <a href="#">Tom Lawrence</a>.
   </div>
   
+  <script src="js/script.js"></script>
   
   <!--
   Home
