@@ -101,7 +101,11 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 62px;
+    width: 6rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translate(-50%, -50%);
     transition: all 300ms ease-in-out;
 }
@@ -172,13 +176,13 @@ img {
 }
 
 /* body */
-.img-hero,
+.mobile-img-hero,
 .img-about {
     width: 100vw;
     min-width: 25rem;
 }
 
-.img-hero {
+.mobile-img-hero {
     position: absolute;
     z-index: 0;
     opacity: 0;
@@ -193,6 +197,7 @@ img {
 
 .hero-text {
     display: grid;
+    justify-content: center;
 }
 
 .hero,
@@ -217,13 +222,13 @@ img {
     opacity: 100%;
 }
 
-.hero-section {
+.hero-images {
     display: flex;
     position: relative;
 }
 
-.hero-section .arrow-left,
-.hero-section .arrow-right {
+.hero-images .arrow-left,
+.hero-images .arrow-right {
     display: none;
     position: absolute;
     z-index: 100;
@@ -238,18 +243,18 @@ img {
     transition: all 200ms ease-in-out;
 }
 
-.hero-section .arrow-left:hover,
-.hero-section .arrow-right:hover {
+.hero-images .arrow-left:hover,
+.hero-images .arrow-right:hover {
     cursor: pointer;
     background-color: hsl(0, 0%, 40%);
 }
 
-.hero-section .arrow-left img,
-.hero-section .arrow-right img {
+.hero-images .arrow-left img,
+.hero-images .arrow-right img {
     width: 12px;
 }
 
-.hero-section .arrow-left {
+.hero-images .arrow-left {
     margin-right: 56px;
 }
 
@@ -261,6 +266,7 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.75rem;
+    transition: all 200ms ease-in-out;
 }
 
 .call-to-action:hover {
@@ -276,4 +282,169 @@ img {
 
 .attribution a { 
     color: unset; 
+}
+
+.desktop-img-hero {
+    display: none;
+}
+
+/* Desktop */
+@media screen and (min-width: 1100px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    img {
+        max-width: unset;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header nav {
+        width: 32%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .header__logo {
+        position: static;
+        transform: unset;
+    }
+
+    .header__links {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        position: static;
+        visibility: visible;
+        transform: unset;
+    }
+
+    .header__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 3rem;
+        color:hsl(0, 0%, 100%);
+        font-weight: 500;
+        font-size: 1rem;
+        opacity: 100%;
+        border-bottom: 1.5px solid hsl(0, 0%, 100%, 0);
+    }
+
+    .header__link:hover {
+        color: hsl(0, 0%, 100%);
+        border-bottom: 1.5px solid hsl(0, 0%, 100%, 1);
+    }
+
+    .header,
+    .wrapper {
+        width: 100vw;
+        min-width: 1100px;
+        max-width: 250vh;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0px 5px 10px hsl(0, 0%, 63%);
+    }
+
+    .hero-images .arrow-left,
+    .hero-images .arrow-right {
+        right: -19.05%;
+        width: 9.52%;
+        height: 14.98%;
+
+    }
+
+    .hero-images .arrow-left img,
+    .hero-images .arrow-right img {
+        width: unset;
+    }
+
+    .hero-images .arrow-left {
+        margin-right: 9.52%;
+    }
+
+    .hero-section {
+        display: flex;
+        width: 100%;
+    }
+
+    .hero-images {
+        display: grid;
+        flex: 1 1 auto;
+        width: 58%
+    }
+
+    .desktop-img-hero {
+        display: unset;
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        grid-area: 1 / 1 / span 1 / span 1;
+        opacity: 0;
+        object-fit: cover;
+        transition: opacity 500ms ease-in-out;
+    }
+
+    .visible-img {
+        z-index: 50;
+        position: relative;
+        opacity: 100%;
+    }
+
+    .hero-text {
+        flex: 1 1 auto;
+        width: 42%;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .img-about-div {
+        width: 31%;
+    }
+
+    .img-about {
+        width: 100%;
+        height: 100%;
+        min-width: unset;
+        object-fit: cover;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 38%;
+        min-width: unset;
+        max-width: unset;
+    }
+
+    .about h2 {
+        width: 85%;
+    }
+
+    .about p {
+        width: 85%;
+    }
+
+    .mobile-img-hero {
+        display: none;
+    }
+
 }
